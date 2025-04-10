@@ -15,6 +15,8 @@ cask "perfetto" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  caveats "This cask must be installed with the --no-quarantine option"
+
   binary "mac-#{arch}/perfetto"
   binary "mac-#{arch}/trace_processor_shell"
   binary "mac-#{arch}/tracebox"
