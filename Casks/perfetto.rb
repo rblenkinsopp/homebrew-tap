@@ -1,11 +1,14 @@
 cask "perfetto" do
   arch arm: "arm64", intel: "amd64"
+  os macos: "mac", linux: "linux"
 
   version "49.0"
-  sha256 arm:   "cece033ea84f9c004588ba6006ba204bacd6cedaf8c7deb59d7ebeedff884ba9",
-         intel: "b20331ccea9712de95618d7973abe14b7f9985c752eda1bc485f3c795621a290"
+  sha256 arm:          "cece033ea84f9c004588ba6006ba204bacd6cedaf8c7deb59d7ebeedff884ba9",
+         intel:        "b20331ccea9712de95618d7973abe14b7f9985c752eda1bc485f3c795621a290",
+         arm64_linux:  "30f20cb58140c767e8fdc6a3ed2cad6784df50d700837f4c1cadb3f83acf0faf",
+         x86_64_linux: "21112a8243afb5476e73c0b07895c4d1df2124ae330e7dd5951aaf008cd98df2"
 
-  url "https://github.com/google/perfetto/releases/download/v#{version}/mac-#{arch}.zip",
+  url "https://github.com/google/perfetto/releases/download/v#{version}/#{os}-#{arch}.zip",
       verified: "github.com/google/perfetto/releases/download/"
   name "perfetto"
   desc "System profiling, app tracing and trace analysis"
