@@ -16,6 +16,13 @@ class CmakeAT3 < Formula
     regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/rblenkinsopp/tap"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "69a2f05a9bc54a1d25bd3dc815664830d0589df726aaa9463cc6bcc2f160fab1"
+    sha256 cellar: :any_skip_relocation, ventura:       "b295a03c2f438b24e03050dff12e82f8aa4616cf05983fa126c3b5062d06b439"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83c29f36695eaf6ee088f88dceffacbad1f7b72e45cc92b1aab5556bbb80202b"
+  end
+
   keg_only :versioned_formula
 
   uses_from_macos "ncurses"
