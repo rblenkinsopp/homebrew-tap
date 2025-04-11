@@ -18,9 +18,9 @@ class CmakeAT3 < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/rblenkinsopp/tap"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "69a2f05a9bc54a1d25bd3dc815664830d0589df726aaa9463cc6bcc2f160fab1"
-    sha256 cellar: :any_skip_relocation, ventura:       "b295a03c2f438b24e03050dff12e82f8aa4616cf05983fa126c3b5062d06b439"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83c29f36695eaf6ee088f88dceffacbad1f7b72e45cc92b1aab5556bbb80202b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "820dde57efaee4e27785ea27d983a95ed1a0bc8247cfd1ed737a89f64d52c524"
+    sha256 cellar: :any_skip_relocation, ventura:       "cd16a3737c3d68ad8ad03cfd3ca10c2308b0538597125a46d439e8a1227d4408"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e853133f6c87bd96796054756704cb2196d2b29ca0188ecfa20663fd295200d"
   end
 
   keg_only :versioned_formula
