@@ -2,11 +2,11 @@ cask "perfetto" do
   arch arm: "arm64", intel: "amd64"
   os macos: "mac", linux: "linux"
 
-  version "49.0"
-  sha256 arm:          "cece033ea84f9c004588ba6006ba204bacd6cedaf8c7deb59d7ebeedff884ba9",
-         intel:        "b20331ccea9712de95618d7973abe14b7f9985c752eda1bc485f3c795621a290",
-         arm64_linux:  "30f20cb58140c767e8fdc6a3ed2cad6784df50d700837f4c1cadb3f83acf0faf",
-         x86_64_linux: "21112a8243afb5476e73c0b07895c4d1df2124ae330e7dd5951aaf008cd98df2"
+  version "50.1"
+  sha256 arm:          "d56233c2629ea325841351c80fc75abcc77f13ab6d01251319b8844ed328302f",
+         intel:        "68133999f79552e79402a5c7696ef7eed357f1ff376ef5318bccd74b1f151dcb",
+         arm64_linux:  "93ec14ff907f0188edec7e74695d9e55106a520e93c82e7bb7bd27ee2b535a55",
+         x86_64_linux: "7165d3ee71e13204f37c16ff0bff8bb6e73f2c484a33b85d1a185bd81930c3a5"
 
   url "https://github.com/google/perfetto/releases/download/v#{version}/#{os}-#{arch}.zip",
       verified: "github.com/google/perfetto/releases/download/"
@@ -19,10 +19,10 @@ cask "perfetto" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  binary "mac-#{arch}/perfetto"
-  binary "mac-#{arch}/trace_processor_shell"
-  binary "mac-#{arch}/tracebox"
-  binary "mac-#{arch}/traceconv"
-  binary "mac-#{arch}/traced"
-  binary "mac-#{arch}/traced_probes"
+  binary "#{os}-#{arch}/perfetto"
+  binary "#{os}-#{arch}/trace_processor_shell"
+  binary "#{os}-#{arch}/tracebox"
+  binary "#{os}-#{arch}/traceconv"
+  binary "#{os}-#{arch}/traced"
+  binary "#{os}-#{arch}/traced_probes"
 end
