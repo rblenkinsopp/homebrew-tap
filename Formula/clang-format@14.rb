@@ -22,6 +22,13 @@ class ClangFormatAT14 < Formula
     regex(%r{href=.*?/tag/llvmorg[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/rblenkinsopp/tap"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "49cd26573393bff46d6dc368c9e8b941618ceba85ba51c6c2aff6318e95e5148"
+    sha256 cellar: :any_skip_relocation, ventura:       "b1f4e9895c00e5db91d9a794778e97eabf3578651669e6c3aa61ac1d2ca4dcea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "083852e33ae63c7a09ee4b2553f4aa0a906bc9a3bfcac4083ca1ee7282192ca3"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
